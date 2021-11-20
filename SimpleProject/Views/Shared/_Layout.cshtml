@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+   
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css" media="screen">
+</head>
+<body>
+    <div class="fix header_area">
+        <div class="fix wrapper header">
+            <div class="fix logo floatleft">
+                <h1> Book Store <span>Download</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="fix search_area">
+        <div class="fix wrapper search_box">
+            <form  asp-action="Search" asp-controller="Book">
+                <p>
+                    <input type="search" name="term" class="search" placeholder="Search and download free software...">
+                    <input type="submit" class="search_submit" value="Search">
+                </p>
+            </form>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+     
+</body>
+</html>
